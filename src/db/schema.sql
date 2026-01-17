@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS product_options (
     product_id TEXT NOT NULL,
     name TEXT NOT NULL,
     position INTEGER DEFAULT 0,
-    values TEXT NOT NULL,
+    option_values TEXT NOT NULL,
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 

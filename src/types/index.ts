@@ -112,7 +112,7 @@ export interface OptionRow {
   product_id: string;
   name: string;
   position: number;
-  values: string;
+  option_values: string;
 }
 
 export interface ImageRow {

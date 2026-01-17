@@ -82,7 +82,7 @@ async function getProductWithRelations(
     options: options.map((o) => ({
       id: o.id,
       name: o.name,
-      values: JSON.parse(o.values),
+      values: JSON.parse(o.option_values),
     })),
     images: images.map((i) => ({
       url: i.url,

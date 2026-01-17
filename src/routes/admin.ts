@@ -91,7 +91,7 @@ admin.post('/products', async (c) => {
         const option = body.options[i];
         const optionId = generateId('opt');
         await c.env.DB.prepare(`
-          INSERT INTO product_options (id, product_id, name, position, values)
+          INSERT INTO product_options (id, product_id, name, position, option_values)
           VALUES (?, ?, ?, ?, ?)
         `)
           .bind(optionId, productId, option.name, i, JSON.stringify(option.values))

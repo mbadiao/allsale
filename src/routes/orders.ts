@@ -40,13 +40,13 @@ orders.post('/', async (c) => {
     // Insert order into D1
     await c.env.DB.prepare(`
       INSERT INTO orders (
-        id, shopify_cart_id, customer_email, customer_name, customer_phone,
+        id, cart_id, customer_email, customer_name, customer_phone,
         shipping_address, subtotal_amount, tax_amount, total_amount,
         currency_code, line_items, status, payment_status
       ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending', 'pending')
     `).bind(
       orderId,
-      body.cart.id,
+      body.cart.id || '',
       body.customer.email,
       body.customer.name,
       body.customer.phone,
