@@ -411,7 +411,7 @@ admin.post('/upload', async (c) => {
     });
 
     // Construct public URL (assuming R2 bucket is public or using custom domain)
-    const url = `https://images.allsale.sn/${key}`;
+    const url = `${c.env.R2_PUBLIC_URL}/${key}`;
 
     return c.json<ApiResponse<{ url: string; key: string }>>({
       success: true,

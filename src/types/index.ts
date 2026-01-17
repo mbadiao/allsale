@@ -8,6 +8,7 @@ export interface Env {
   PAYDUNYA_TOKEN: string;
   PAYDUNYA_MODE: 'test' | 'live';
   FRONTEND_URL: string;
+  R2_PUBLIC_URL: string;
   ADMIN_API_KEY?: string;
 }
 
